@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+@media (max-width: 768px) {
+    #order {
+
+        form {
+            @include form_base;
+            
+            input {
+                @include input_base;  
+            }
+            button { 
+                @include button_base;
+
+                i {
+                    @include i_base;
+                }
+                
+                span {    
+                    @include span_base;
+                }
+            }
+        }   
+    }
+}

@@ -1,0 +1,40 @@
+@import "variables";
+
+@mixin body_bkg {
+    background-image: $body_bkg_img;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@mixin form_base {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    overflow: hidden;
+}
+
+@mixin input_base {
+    box-sizing: border-box;
+    outline: none;
+    background-color:$inp_color; 
+    opacity: 0.7;            
+    text-decoration: $inp_placeholder_color;
+}
+
+@mixin button_base {
+    color: $btn_text_color;
+    background-color: $btn_color;
+    outline: none;
+}
+
+@mixin span_base {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+@mixin i_base {
+    margin-right: 10px;
+}

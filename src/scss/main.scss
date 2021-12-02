@@ -1,0 +1,20 @@
+@import "mobile";
+@import "desktop";
+
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+@import '../../node_modules/font-awesome/scss/font-awesome.scss';
+
+body {
+
+    display: flex;    
+    box-sizing: border-box;
+    @include body_bkg;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#order {
+    display: flex;
+    justify-content: center;
+}
+    

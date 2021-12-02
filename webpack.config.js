@@ -30,8 +30,11 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     outputPath: 'fonts/',
-                }
-
+                },
+            },
+            {
+                test: /\.(jpe?g|png|gif)$/i,
+                type: 'asset/resource',
             }          
         ]
     },
