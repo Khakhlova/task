@@ -7,23 +7,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-top: 40px;
+    width: 313px;
+    border: none; }
     #order form input {
       box-sizing: border-box;
       outline: none;
       background-color: #e7e7e7;
-      opacity: 0.7;
-      text-decoration: darkgray; }
+      opacity: 0.6;
+      text-decoration: darkgray;
+      height: 55px;
+      width: 169px;
+      border: 2px solid white;
+      padding-left: 30px;
+      margin-right: 1px;
+      font-size: 0.9rem; }
     #order form button {
       color: white;
       background-color: red;
-      outline: none; }
+      outline: none;
+      height: 55px;
+      width: 144px;
+      border: 2px solid white; }
       #order form button i {
         margin-right: 10px; }
       #order form button span {
         display: flex;
         justify-content: center;
-        font-weight: 600; } }
+        font-weight: 600;
+        font-size: 0.9rem; } }
 
 @media (min-width: 768px) {
   #order form {
@@ -35,7 +48,7 @@
       box-sizing: border-box;
       outline: none;
       background-color: #e7e7e7;
-      opacity: 0.7;
+      opacity: 0.6;
       text-decoration: darkgray; }
     #order form button {
       color: white;
