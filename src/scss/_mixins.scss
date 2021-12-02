@@ -18,8 +18,7 @@
 @mixin input_base {
     box-sizing: border-box;
     outline: none;
-    background-color:$inp_color; 
-    opacity: 0.6;            
+    //background-color:$inp_color;
     text-decoration: $inp_placeholder_color;
 }
 

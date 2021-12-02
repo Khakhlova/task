@@ -17,7 +17,8 @@
                 border: 2px solid $border_mobile_color;
                 padding-left: 30px;
                 margin-right: 1px;
-                font-size: 0.9rem;    
+                font-size: 0.9rem;  
+                background-color:$inp_mobile_color;  
             }
             button { 
                 @include button_base;
