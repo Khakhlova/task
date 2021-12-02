@@ -7,6 +7,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/app.js":
@@ -15,8 +16,17 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main.js */ \"./src/js/main.js\");\n/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\n\n\n//# sourceURL=webpack://task/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main.js */ \"./src/js/main.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\n\n\n//# sourceURL=webpack://task/./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/js/addElement.js":
+/*!******************************!*\
+  !*** ./src/js/addElement.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addElement)\n/* harmony export */ });\nfunction addElement(textDiv, cityValue) {\n  let newDiv = document.createElement(\"div\");\n  newDiv.id = 'msg';\n  newDiv.innerText = textDiv;\n  let orderDiv = document.getElementById(\"order\");\n  orderDiv.after(newDiv);\n  cityValue.value = \"\";\n}\n\n//# sourceURL=webpack://task/./src/js/addElement.js?");
 
 /***/ }),
 
@@ -24,9 +34,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n//# sourceURL=webpack://task/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _addElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addElement */ \"./src/js/addElement.js\");\n\nconst city = document.getElementById(\"city\");\nconst submitBtn = document.getElementById(\"submit\");\n\nfunction deleteElement() {\n  if (document.getElementById(\"msg\")) {\n    document.getElementById(\"msg\").remove();\n  }\n}\n\ncity.onfocus = deleteElement;\nsubmitBtn.addEventListener('click', () => {\n  deleteElement();\n\n  if (!city.value) {\n    (0,_addElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"Enter city\", city);\n  } else {\n    (0,_addElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"City\", city);\n  }\n});\n\n//# sourceURL=webpack://task/./src/js/main.js?");
 
 /***/ }),
 
@@ -36,7 +46,6 @@ eval("\n\n//# sourceURL=webpack://task/./src/js/main.js?");
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://task/./src/scss/main.scss?");
 
 /***/ })
@@ -68,18 +77,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
