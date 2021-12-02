@@ -1,4 +1,5 @@
 import addElement from "./addElement";
+const orderDiv = document.getElementById("order"); 
 
 export default async function getWeather(divName) {
 
@@ -7,14 +8,14 @@ export default async function getWeather(divName) {
     const data = await res.json();
 
     if (data.cod == 404) {
-        addElement("City not found", divName);       
+        addElement("msg", orderDiv, "City not found", divName);       
     } else { 
         let result = `     ${divName.value.toUpperCase()}
                     temperature: ${data.main.temp}°C
                     humidity: ${data.main.humidity} %
                     windSpeed: ${data.wind.speed} m/s`; 
         console.log(result); 
-        addElement(result, divName);   
+        addElement("msg", orderDiv, result, divName);   
     }
-          
+
 };

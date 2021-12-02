@@ -1,8 +1,7 @@
-export default function addElement (textDiv, cityValue) {
+export default function addElement (idDiv, prevEl, textDiv, cityValue) {
     let newDiv = document.createElement("div");
-    newDiv.id = 'msg';
-    newDiv.innerText = textDiv;   
-    let orderDiv = document.getElementById("order");
-    orderDiv.after(newDiv);
+    newDiv.id = idDiv;
+    newDiv.innerText = textDiv;
+    prevEl.after(newDiv);
     cityValue.value = "";
 }

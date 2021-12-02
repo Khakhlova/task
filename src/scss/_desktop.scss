@@ -43,5 +43,13 @@
                 }
             }
         }
+        #msg_warn {
+            @include msg_warn;
+        }
+          
+    }
+
+    #msg {
+        @include msg_base;
     }
 }

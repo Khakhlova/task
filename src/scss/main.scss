@@ -16,5 +16,12 @@ body {
 #order {
     display: flex;
     justify-content: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
 }
     

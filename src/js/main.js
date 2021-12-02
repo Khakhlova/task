@@ -3,14 +3,18 @@ import getWeather from "./getWeather";
 
 const city = document.getElementById("city");
 const submitBtn = document.getElementById("submit");
+const formEl = document.getElementById("form");
 
-function deleteElement () {
-    if (document.getElementById("msg")) {
-        document.getElementById("msg").remove();
+function deleteElement (idEl) {
+    if (document.getElementById(idEl)) {
+        document.getElementById(idEl).remove();
     }
 };
 
-city.onfocus = deleteElement;
+city.addEventListener("focus", () => {
+    deleteElement("msg"); 
+    deleteElement("msg_warn"); 
+});
 
 city.addEventListener("keydown", (e) => {
         if (e.key === 'Enter') {
@@ -20,9 +24,10 @@ city.addEventListener("keydown", (e) => {
 );
 
 submitBtn.addEventListener('click', () => {
-    deleteElement();
+    deleteElement("msg");
+    deleteElement("msg_warn");
     if (!city.value) {
-        addElement("Enter city", city);
+        addElement("msg_warn", form, "Enter city!", city);
        } else {
         getWeather(city);
        }
